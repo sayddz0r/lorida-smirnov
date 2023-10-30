@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+    <title>Моя первая страница</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>   
+     <link rel="stylesheet" href="./css/style1.css">
+</head>
+<body> 
+   <header class="header_top">       
+      <nav class="header_nav">
+         <p class="logo">Андрей Смирнов</p>
+         <ul class="header_link">
+         <input type="checkbox" id="checkbox_toggle">
+         <label for="checkbox_toggle" class="burger">
+            <span class="burger-line"></span>
+         </label>
+         <div class="menu">
+            <li><a href="#about_mee" class="menu_first">Обо мне</a></li>
+            <li><a href="#myactivitiess" class="menu_second"> Моя деятельность</a></li>
+            <li><a href="#calcs" class="menu_second"> Калькулятор</a></li>
+            <li><a href="#myproblemss" class="menu_second"> Сложности</a></li>
+            <li><a href="#mymood" class="menu_second"> Настроение</a></li>
+            <li><a href="https://vk.com/ddz0r" class="menu_second"> Контакты</a></li>
+         </div>
+         </ul>                  
+      </nav>
+   </header>     
+   <main>
+      <section>
+         <div class="containet_center">
+            <div class="container_text">
+               <div class="about_me" id="about_mee">
+                  <h1>Меня зовут Андрей!</h1>
+                  <h2> И я хочу обучиться программированию, потому что это мой выбор!</h2>
+                  <h2> А еще я люблю музыку и компьютерные игры.</h2>
+               </div>
+               <div class="img_me">
+                  <img src="img/1.jpg" alt="Это я" />
+               </div>
+            </div>
+            <div class="container_myactivities" id="myactivitiess">
+               <div class="myactivities">
+                  <h3>Моя деятельность</h3>
+               </div>
+               <div class="cards">
+                  <div class="container-cards">
+                     <div class="card">
+                        <div class="card-rectangle-first-group">
+                           <div class="card-rectangle-first">
+                              <h4>1</h4>
+                              <p>Пробую обучиться программированию</p>
+                           </div>
+                        </div>
+                        <div class="card-rectangle-second-group">
+                           <div class="card-rectangle-second">
+                              <h4>2</h4>
+                              <p>Играю в компьютерные игры</p>
+                           </div>
+                        </div>
+                        <div class="card-rectangle-first-group">
+                           <div class="card-rectangle-first">
+                              <h4>3</h4>
+                              <p>Слушаю музыку</p>
+                           </div>
+                        </div>
+                        <div class="card-rectangle-second-group">
+                           <div class="card-rectangle-second">
+                              <h4>4</h4>
+                              <p>Смотрю единоборства</p>
+                           </div>
+                        </div>
+                        <div class="card-rectangle-first-group">
+                           <div class="card-rectangle-first">
+                              <h4>5</h4>
+                              <p>Смотрю Ютубчик</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="calc" id="calcs">
+               <h3>Калькулятор</h3>
+               <div class="calc-menu-firstnumber">Введите первое число:</div>
+               <input class="calc-menu-firstnumbers" type="number" step="0.001" min="-99999999.999" max="99999999.999">
+
+               <div class="calc-menu-operation">Выберите операцию:</div>
+               <select class="calc-menu-operations">
+                  <option value="+">+</option>
+                  <option value="-">-</option>
+                  <option value="/">/</option>
+                  <option value="*">*</option>
+               </select>
+               <div class="calc-menu-secondnumber">Введите второе число:</div>
+               <input class="calc-menu-secondnumbers" type="number" step="0.001" min="-99999999.999" max="99999999.999">
+
+               <br>
+               <div class="button-calc"></div>
+               <button class="button-blue" id="btn-result">Вычислить</button>
+               <div class="modal" id="my-modal">
+                  <div class="window-result">
+                     <h3>Результат</h3>
+                     <p class="calc-result"></p>
+                     <div class="btn-close-resultcalc" id="btn-close-result">
+                        <button>X</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="container_problems">
+               <div class="myproblems" id="myproblemss">
+                  <h3>Сложности</h3>
+               </div>
+               <div class="cards-problems"> 
+                  <div class="container-cards-problems">
+                     <div class="card-problem">
+                           <div class="card-problem-first-group">
+                              <div class="card-problem-first">
+                              <h4>?</h4>
+                              <p>Не разобрался еще с адаптивом</p>
+                              </div>
+                           </div>                                             
+                           <div class="card-problem-second-group">
+                              <div class="card-problem-second">
+                                 <h4>?</h4>
+                                 <p>Были проблемы с рамками</p>
+                              </div>
+                           </div>
+                           <div class="card-problem-first-group">
+                              <div class="card-problem-first">
+                                 <h4>?</h4>
+                                 <p>С бургер меню есть проблемы</p>
+                              </div>
+                           </div>
+                           <div class="card-problem-second-group">
+                              <div class="card-problem-second">
+                                 <h4>?</h4>
+                                 <p>Были проблемы с позиционированием</p>
+                              </div>
+                           </div>
+                           <div class="card-problem-first-group">
+                              <div class="card-problem-first">
+                                 <h4>?</h4>
+                                 <p>Знак вк черный ( </p>
+                              </div>
+                        </div>
+                     </div> 
+                  </div>              
+                                 
+               </div>
+            </div>
+            <div class="mood" id="moods">
+               <h3>Настроение</h3>
+            </div>
+            <div class="img-mood-smile">
+               <img src="img/1682550059_papik-pro-p-smail-rabota-png-25.jpg" alt="Умный смайлик">
+            </div>
+         </div>
+      </section>
+   </main>
+   <footer class="footer">
+      <div class="logo">Андрей Смирнов</div>
+      <nav class="footer-section">
+         <a href="https://vk.com/ddz0r" class="footer-logovk" role="button">
+          <img class="footer-button" src="img/logovk.png" alt="Ссылка на профиль">
+         </a>
+      </nav>
+   </footer>
+<script src="mathfunc.js"></script>
+<script src="calc.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

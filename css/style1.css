@@ -1,0 +1,650 @@
+html{
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: Arial;
+    color: white;
+    min-width: 697px;
+    margin:0;
+}
+.header_top {
+
+}
+
+.header_nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #004C93;
+    color: white;
+    list-style-type: none;
+    min-height: 100px; 
+    width: 100%; 
+    margin-top: 0px;
+    z-index: 99;  
+}
+.logo{
+    font-size: 24px;
+    color: #ffff;
+    font-weight: bold;
+    padding: 20px;
+}
+.header_link a{
+color: white;
+margin-right: 25px;
+}
+.menu{
+    display: flex;
+    font-size: 16px;
+    list-style-type: none;
+}
+.menu li {
+    padding: 5px 15px;
+}
+.menu li a:hover{
+    transition: all .3s;
+    color: black;
+}
+
+.menu_second{
+    text-decoration: none;
+    list-style: none;
+}
+#checkbox_toggle {
+    display: none;
+}
+.burger {
+    display:none;
+    font-size: 16px;
+    cursor: pointer;
+}
+/*Линии бургер меню*/
+.burger-line{
+    background-color: rgb(255, 255, 255);
+    display: block;
+    height: 3px;
+    width: 38px;
+    position: relative;
+}
+.burger-line::before,
+.burger-line::after{
+    background-color: rgb(255, 255, 255);
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.burger-line::before {
+    top: 15px;
+}
+.burger-line::after{
+    top: -15px;
+}
+/* бургер меню на мобильной */
+@media (max-width: 975px) {
+    
+    .menu{
+        display: none;
+        max-width: 100%;
+        /*max-height: 438px;*/
+        overflow: hidden;
+        position: absolute;
+        background-color: #004C93;
+        text-align: right;
+        right: 0;
+        left: 0;
+        margin-top: 20px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .menu li a {
+        color: #ffffff;
+        display: block;
+        padding: 15px;
+    }
+    .menu li {
+        transition: all .5s;
+    }
+
+    .menu li:hover{
+        background-color: #3296f3;
+    }
+
+    #checkbox_toggle:checked ~ .menu {
+        display: block;
+        max-height: 438px;
+        transition: all .5s;
+    }
+    
+    .burger {
+    display:block;
+    padding: 20px 30px;
+    }
+    
+    
+
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #004C93;
+        color: white;
+        list-style-type: none;
+        max-width: 100%;        
+    }
+
+}
+/* мобильное*/
+@media screen and (max-width: 1049px) {
+    
+    .container_text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;        
+    }
+    
+    .container_myactivities{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;         
+    }
+    .myactivities{
+        display: flex;
+        justify-content: center;
+    }
+    .cards {  
+        display: flex;     
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;  
+        align-items: center;
+    }
+    .container_cards{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .card-rectangle-first-group {
+        display: flex;        
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+    .card-rectangle-second-group {
+        display: flex;
+        flex-direction: column; 
+        padding-bottom: 10px;         
+    }
+    /*Рамка моя деятельность нечет*/
+    .card-rectangle-first {    
+        width: 578px;
+        height: 200px;
+        border: 1px solid;
+        color: #004C93;
+        border-radius: 4px;
+        font-size: 16px;
+        display: flex;    
+        align-items: flex-start;
+        align-self: flex-start;              
+    }  
+    h4 {
+        color: #004C93;
+        font-size: 120px;
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-bottom: 0px;
+    }
+    p {
+        font-size: 16px;
+        color: #2E4674;
+                
+    }
+    .card-rectangle-second {
+        width: 578px;
+        height: 200px;
+        border: 1px solid;
+        color: #004C93;
+        border-radius: 4px;
+        font-size: 16px;
+        display: flex;    
+        align-items: flex-start;
+        align-self: flex-start;  
+    }
+    .calc {
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        color: black; 
+        padding-left: 20px;   
+    }
+    
+    .calc-menu-firstnumbers {
+        width: 555px;
+        height: 32px;
+        border: 1px solid;
+        color: black;
+    }
+    .calc-menu-operation{
+        padding-top: 40px;
+    }
+    
+    .calc-menu-operations {
+        width: 555px;
+        height: 32px;
+        border: 1px solid;
+        color: black;
+        padding-top: 30px;
+    }
+    
+    select {
+        width: 555px;
+        height: 32px;
+        border: 1px solid;
+        color: black; 
+        font-size: 20px;    
+    }
+    .calc-menu-secondnumber {
+        padding-top: 40px;
+    }
+    .calc-menu-secondnumbers {
+        width: 555px;
+        height: 32px;
+        border: 1px solid;
+        color: black; 
+    }
+    
+    .button-blue {
+        display: inline-block;
+        background-color: #004C93;
+        color: white;
+        width: 168px;
+        height: 50px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .button-blue:hover {
+        color: black;
+        background-color: #3296f3;
+    }
+
+    .container_problems {
+        display: flex;
+        flex-direction: column;   
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .myproblems {
+        display: flex;       
+        justify-content: center;
+    }
+    .cards-problems {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container-cards-problems{
+        display: flex;
+        justify-content: center;
+    }
+    .card-problem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+      
+    .card-problem-first-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 10px;
+    
+    }
+    .card-problem-first{
+        width: 578px;
+        height: 200px;
+        border: 1px solid;
+        border-radius: 4px;
+        color: #004C93;
+        font-size: 16px;
+        display: flex;
+        align-items: flex-start;        
+    }
+    
+    .card-problem-second-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 10px;        
+    }
+    
+    .card-problem-second{
+        width: 578px;
+        height: 200px;
+        border: 1px solid;
+        border-radius: 4px;
+        color: #004C93;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+    }
+    .mood {
+        display: flex;
+        justify-content: center;    
+    }
+    .img-mood-smile {
+        width: 600px;
+        height: 567px;
+        display: flex;
+        justify-content: center;
+        margin-left: 70px;
+        
+    }
+}
+/* десктопная версия */
+@media(min-width: 1050px) {
+    .myactivities{
+        display: block;
+        padding-left: 20px;
+    }
+    .contrainer-cards {
+        display: flex; 
+        justify-content: space-between;      
+    }
+    
+    .card {
+        display:flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;         
+    }
+    
+    
+    .card-rectangle-first-group {
+        display: flex;
+        align-self: flex-start;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .card-rectangle-second-group {
+        display: flex;
+        align-self: flex-end;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 160px;
+    }
+    /*Рамка моя деятельность нечет*/
+    .card-rectangle-first {    
+        width: 200px;
+        height: 289px;
+        border: 1px solid;
+        color: #004C93;
+        border-radius: 4px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: flex-start;  
+        
+    }
+    
+    h4 {
+        color: #004C93;
+        font-size: 120px;
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-bottom: 0px;
+    }
+    
+    p {
+    font-size: 16px;
+    color: #2E4674;
+    padding-left: 10px;
+    }
+    /*Рамка моя деятельность чет*/
+    .card-rectangle-second {
+        width: 200px;
+        height: 264px;
+        border: 1px solid;
+        color: #004C93;
+        border-radius: 4px; 
+        font-size: 16px; 
+        align-self: flex-end; 
+    }
+    .calc {
+        display:flex;
+        align-items: flex-start;
+        flex-direction: column;
+        color: black;
+        padding-left: 20px;    
+    }
+    
+    .calc-menu-firstnumbers {
+        width: 555px;
+        height: 32px;
+        border: 1px solid;
+        color: black;
+    }
+    .calc-menu-operation{
+        padding-top: 40px;
+    }
+    
+    .calc-menu-operations {
+        width: 555px;
+        height: 32px;
+        border: 1px solid;
+        color: black;
+        padding-top: 30px;
+    }
+    
+    select {
+        width: 555px;
+        height: 32px;
+        border: 1px solid;
+        color: black; 
+        font-size: 20px;    
+    }
+    .calc-menu-secondnumber {
+        padding-top: 40px;
+    }
+    .calc-menu-secondnumbers {
+        width: 555px;
+        height: 32px;
+        border: 1px solid;
+        color: black; 
+    }
+    
+    .button-blue {
+        display: inline-block;
+        background-color: #004C93;
+        color: white;
+        width: 168px;
+        height: 50px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .button-blue:hover {
+        color: black;
+        background-color: #3296f3;
+    }
+    .modal {
+        position: fixed;
+        margin-top: 100px;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        visibility: hidden;
+        opacity: 0;
+        overflow-x: auto;
+        transition: opacity .8ms, visibility .8ms;
+    }
+    .window-result{
+        position: relative;
+        max-width: 550px;
+        max-height: 200px;
+        z-index: 2;
+        margin-top: 200px;
+        padding: 10px 10px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 8px;
+        box-shadow: 5px 5px 15px lightskyblue;
+    }
+    .modal.open{
+        visibility: visible;
+        opacity: 1;
+    }
+    .calc-result{
+        font-size: 26px;
+        color: darkorchid;
+
+    }
+    
+    .btn-close-resultcalc{
+        position: absolute;
+        border: none;
+        background-color: none;
+        opacity: 0.8;
+        bottom: 20px;
+        right: 20px;
+        cursor: pointer;
+
+    }
+    .btn-close-resultcalc:hover {
+        opacity: 1;
+    }
+
+    .container_problems {
+        display: block;    
+    }
+    .myproblems{
+        padding-left: 20px;        
+    }
+    .card-problem {
+        display: flex;
+        justify-content: space-around;
+    }
+                
+    .card-problem-first-group{
+        display: flex;
+        align-self: flex-start;
+        flex-direction: row;
+        justify-content: space-around;
+    
+    }
+    .card-problem-first{
+        width: 200px;
+        height: 264px;
+        border: 1px solid;
+        border-radius: 4px;
+        color: #004C93;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .card-problem-second-group{
+        display: flex;
+        align-self: flex-end;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 160px;
+    }
+    
+    .card-problem-second{
+        width: 200px;
+        height: 264px;
+        border: 1px solid;
+        border-radius: 4px;
+        color: #004C93;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .mood{
+        display: flex;
+        padding-left: 20px;
+
+    }
+    .img-mood-smile {
+        width: 600px;
+        height: 567px;
+        display: flex;
+        justify-content: center;
+        padding-left: 720px;
+    }
+}
+    
+
+
+.container_text {
+    background-color: white;
+    display: flex;  
+    padding-top: 130px;  
+}
+h1 {
+    color: #004C93;
+    font-size: 36px;
+    display: flex;
+}
+h2 {
+    color: #004C93;
+    font-size: 24px;
+    font-style: italic;
+    display:flex;
+}
+.img_me{
+    float: right;
+    display: flex;
+    margin-top: 30px;
+    width: 565px;
+    height: 630px;
+}
+h3 {
+    color: #004C93;
+    font-size: 36px;    
+}
+.container_myactivies{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #004C93;
+    color: white;
+    list-style-type: none;
+    min-height: 100px;    
+}
+.footer-section{
+    display: flex;
+    justify-content: end;
+    
+}
+.footer-logovk {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: end;
+    padding-right: 30px;
+    background-color: #004C93;
+}
