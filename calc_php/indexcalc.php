@@ -1,4 +1,8 @@
 <?php
+$connection = mysqli_connect("localhost","root", "","calc_data");
+if (!$connection) {
+    die ("Связь не установлена. Попробуйте еще раз." . mysqli_connect_error());
+}
 if (isset($_POST['button']))
 {
     $a=(int) $_POST['number1'];
@@ -18,6 +22,15 @@ if (isset($_POST['button']))
         else $c=$a / $b;
     }
 }
+mysqli_query($connection, "INSERT INTO calc_result(`number_1`, `operation`, `number_2`, `result`) VALUES ('".$_POST['number1']."','".$_POST['operation']."','".$_POST['number2']."','".$c."')");
+$query = mysqli_query($connection, "SELECT * FROM calc_result ORDER BY id DESC LIMIT 7");
+$res=[];
+$row=mysqli_fetch_assoc($query);
+while   (!empty($row)){
+    $res[]=$row;
+    $row=mysqli_fetch_assoc($query);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -44,6 +57,19 @@ if (isset($_POST['button']))
             echo $c;
          ?>
      </span>
+    </div>
+    <div>
+        <span>История операций:</span>
+        <span>
+            <?php
+            foreach ($res as $resul){ ?>
+                <?php echo $resul["number_1"]; ?>
+                <?php echo $resul["operation"]; ?>
+                <?php echo $resul["number_2"]; ?>
+                <span>=</span>
+                <?php echo $resul["result"]; ?>
+            <?php }?>
+        </span>
     </div>
 
 </form>
