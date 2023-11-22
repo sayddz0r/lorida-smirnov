@@ -12,18 +12,15 @@ function calculate() {
     fetch("calc_v2.php?number1=" + number1 + "&operation=" + operation + "&number2=" + number2)
         .then(response => response.json())
         .then(jsonObject => {
-             console.log(jsonObject);
-
-             let resultField = document.querySelector(".result");
-             resultField.innerHTML = "Результат вычислений" + jsonObject.result;
 
             let i;
             let endresult = "";
-            for (i = 0; i < jsonObject.result.length; i++) {
-                endresult = endresult + jsonObject.result[i] + "; ";
+            for (i = 0; i < jsonObject.result_calc.length; i++) {
+                endresult = endresult + jsonObject.result_calc[i] + "; ";
             }
-            resultField = document.querySelector(".endresult");
-            resultField.innerHTML = "Последние вычисления" + endresult;
+            let resultField = document.querySelector(".lastresult");
+            resultField.innerHTML = "Последние вычисления:" + endresult;
+
 
         })
 }
