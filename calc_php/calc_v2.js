@@ -8,19 +8,15 @@ function calculate() {
     let number2Input = document.querySelector("#number2");
     let number2 = number2Input.value;
 
-
     fetch("calc_v2.php?number1=" + number1 + "&operation=" + operation + "&number2=" + number2)
         .then(response => response.json())
         .then(jsonObject => {
-
             let i;
             let endresult = "";
-            for (i = 0; i < jsonObject.result_calc.length; i++) {
-                endresult = endresult + jsonObject.result_calc[i] + "; ";
+            for (i = 0; i < jsonObject.length; i++) {
+                endresult = endresult + jsonObject[i];
             }
             let resultField = document.querySelector(".lastresult");
-            resultField.innerHTML = "Последние вычисления:" + endresult;
-
-
+            resultField.innerHTML = "Последние вычисления:<br>" + endresult;
         })
 }
